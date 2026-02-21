@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #00d1b2;
+    --orange: #ff9f43;
+    --red: #ff5e57;
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calc-container {
+    width: 90%;
+    max-width: 380px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.display-section {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+#main-display { font-size: 2.5rem; font-weight: bold; overflow-x: auto; }
+#sub-display { color: var(--accent); font-size: 1rem; margin-bottom: 5px; }
+
+.smart-panel {
+    background: #252525;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px dashed #444;
+}
+
+.mode-btn {
+    width: 100%;
+    background: var(--accent);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.rate-input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#item-price {
+    width: 50%;
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 65px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.num-btn { background: #333; color: white; }
+.op-btn { background: #444; color: var(--orange); }
+.action-btn { background: var(--red); color: white; }
+.equal-btn { background: var(--accent); color: white; grid-column: span 2; }
+
+button:active { transform: scale(0.9); }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
